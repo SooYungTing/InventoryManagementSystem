@@ -233,7 +233,7 @@ class InventoryGUI:
             c = conn.cursor()
 
             # execute SQL query to retrieve the product from the database
-            c.execute("SELECT * FROM inventory WHERE item_num=?", (item_num))
+            c.execute("SELECT * FROM inventory WHERE item_num=?", (item_num,))
             row = c.fetchall()
 
             # close the connection

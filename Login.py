@@ -11,7 +11,7 @@ def login():
     cursor = conn.cursor()
 
     # Check if the employee ID and password match a record in the database
-    cursor.execute("SELECT * FROM registration WHERE id=? AND password=?", (employee_id, password))
+    cursor.execute("SELECT * FROM registration WHERE employee_id=? AND password=?", (employee_id, password))
     records = cursor.fetchall()
 
     if records:
